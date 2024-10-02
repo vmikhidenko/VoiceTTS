@@ -1,0 +1,145 @@
+# config_schema
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "model": { "type": "string" },
+    "run_name": { "type": "string" },
+    "run_description": { "type": "string" },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "sample_rate": { "type": "integer" },
+        "max_wav_value": { "type": "number" },
+        "mel_fmin": { "type": "number" },
+        "mel_fmax": { "type": "number" },
+        "filter_length": { "type": "integer" },
+        "hop_length": { "type": "integer" },
+        "win_length": { "type": "integer" },
+        "n_mel_channels": { "type": "integer" },
+        "mel_norm": { "type": "boolean" },
+        "num_mels": { "type": "integer" }
+      },
+      "required": [
+        "sample_rate",
+        "max_wav_value",
+        "mel_fmin",
+        "mel_fmax",
+        "filter_length",
+        "hop_length",
+        "win_length",
+        "n_mel_channels",
+        "mel_norm",
+        "num_mels"
+      ]
+    },
+    "model_args": {
+      "type": "object",
+      "properties": {
+        "use_phonemes": { "type": "boolean" },
+        "phoneme_language": { "type": "string" },
+        "inter_channels": { "type": "integer" },
+        "hidden_channels": { "type": "integer" },
+        "filter_channels": { "type": "integer" },
+        "n_heads": { "type": "integer" },
+        "n_layers": { "type": "integer" },
+        "kernel_size": { "type": "integer" },
+        "p_dropout": { "type": "number" },
+        "resblock": { "type": "string" },
+        "resblock_kernel_sizes": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "resblock_dilation_sizes": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "integer" }
+          }
+        },
+        "upsample_rates": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "upsample_initial_channel": { "type": "integer" },
+        "upsample_kernel_sizes": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "n_layers_q": { "type": "integer" },
+        "use_spectral_norm": { "type": "boolean" }
+      },
+      "required": [
+        "use_phonemes",
+        "phoneme_language",
+        "inter_channels",
+        "hidden_channels",
+        "filter_channels",
+        "n_heads",
+        "n_layers",
+        "kernel_size",
+        "p_dropout",
+        "resblock",
+        "resblock_kernel_sizes",
+        "resblock_dilation_sizes",
+        "upsample_rates",
+        "upsample_initial_channel",
+        "upsample_kernel_sizes",
+        "n_layers_q",
+        "use_spectral_norm"
+      ]
+    },
+    "training": {
+      "type": "object",
+      "properties": {
+        "batch_size": { "type": "integer" },
+        "epochs": { "type": "integer" },
+        "learning_rate": { "type": "number" },
+        "lr_decay": { "type": "number" },
+        "seed": { "type": "integer" },
+        "save_step": { "type": "integer" },
+        "eval_step": { "type": "integer" }
+      },
+      "required": [
+        "batch_size",
+        "epochs",
+        "learning_rate",
+        "lr_decay",
+        "seed",
+        "save_step",
+        "eval_step"
+      ]
+    },
+    "characters": {
+      "type": "object",
+      "properties": {
+        "characters_class": { "type": "string" },
+        "pad": { "type": "string" },
+        "eos": { "type": "string" },
+        "bos": { "type": "string" },
+        "characters": { "type": "string" },
+        "punctuations": { "type": "string" },
+        "phonemes": { "type": "string" }
+      },
+      "required": [
+        "characters_class",
+        "pad",
+        "eos",
+        "bos",
+        "characters",
+        "punctuations",
+        "phonemes"
+      ]
+    }
+  },
+  "required": [
+    "model",
+    "run_name",
+    "run_description",
+    "audio",
+    "model_args",
+    "training",
+    "characters"
+  ]
+}

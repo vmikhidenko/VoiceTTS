@@ -1,0 +1,18 @@
+{
+  "characters": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,!.\"'-",
+  "pad_token": "<PAD>",
+  "eos_token": "<EOS>",
+  "bos_token": "<BOS>",
+  "unk_token": "<UNK>",
+  "audio": {
+    "sample_rate": 22050,
+    "trim": true,
+    "normalize": true,
+    "n_mel_channels": 80,
+    "filter_length": 1024,
+    "hop_length": 256,
+    "win_length": 1024,
+    "mel_fmin": 0.0,
+    "mel_fmax": 8000.0
+  }
+}

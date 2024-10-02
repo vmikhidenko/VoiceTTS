@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexicon
+  version="1.0"
+  xmlns="http://www.w3.org/2005/01/pronunciation-lexicon"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon
+        http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
+  alphabet="ipa"
+  xml:lang="en-US">
+   <lexeme>
+      <grapheme>PaaS</grapheme>
+      <alias>pass</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>BYOL</grapheme>
+      <alias>b-y-o-l</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>ELA</grapheme>
+      <alias>e-l-a</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>PAYG</grapheme>
+      <alias>p-a-y-g</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>IPv4</grapheme>
+      <alias>i-p-v-4</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>IPv6</grapheme>
+      <alias>i-p-v-6</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>IAM</grapheme>
+      <alias>i-a-m</alias>
+   </lexeme>
+   <lexeme>
+      <grapheme>ENI</grapheme>
+      <alias>e-n-i</alias>
+   </lexeme>
+</lexicon>

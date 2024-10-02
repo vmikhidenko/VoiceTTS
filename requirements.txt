@@ -1,0 +1,21 @@
+# Core dependencies
+cython==0.29.28
+librosa==0.10.0
+mecab-python3==1.0.5
+numba==0.56.4
+soundfile>=0.12.1
+numpy==1.23.5
+pandas==1.5.3
+setuptools==65.5.0
+
+# TTS-specific dependencies
+tts==0.14.3
+
+# Torch and related dependencies (Adjust versions as needed)
+torch==1.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
+
+scipy==1.10.1
+scikit-learn==1.2.2
+tensorboard
